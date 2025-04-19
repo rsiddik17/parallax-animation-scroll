@@ -99,8 +99,12 @@
     background-image: url(../img/img2.jpg);
 }
 
-.footer {
+.content-2 {
     background-image: url(../img/img3.jpg);
+}
+
+.footer {
+    background-image: url(../img/img4.jpg);
 }
 
 .stay {
