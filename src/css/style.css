@@ -1,0 +1,125 @@
+*,html,body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.bar-top {
+    width: 100%;
+    height: 6px;
+    background-color: crimson;
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: progress-horizontal, progress-color;
+    animation-timeline: scroll();
+    transform-origin: 0%;
+}
+
+.bar-right {
+    width: 6px;
+    height: 100%;
+    background-color: crimson;
+    position: fixed;
+    top: 0;
+    right: 0;
+    animation: progress-vertical, progress-color;
+    animation-timeline: scroll();
+    transform-origin: 0 0%;
+}
+
+.bar-bottom {
+    width: 100%;
+    height: 6px;
+    background-color: crimson;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    animation: progress-horizontal, progress-color;
+    animation-timeline: scroll();
+    transform-origin: 100%;
+}
+
+.bar-left {
+    width: 6px;
+    height: 100%;
+    background-color: crimson;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    animation: progress-vertical, progress-color;
+    animation-timeline: scroll();
+    transform-origin: 0 100%;
+}
+
+@keyframes progress-horizontal {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes progress-vertical {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes progress-color {
+    0% {
+        background-color: crimson;
+    }
+    50% {
+        background-color: gold;
+    }
+    100% {
+        background-color: aqua;
+    }
+}
+
+.parallax {
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+}
+
+.intro {
+    background-image: url(../img/img1.jpg);
+}
+
+.content {
+    background-image: url(../img/img2.jpg);
+}
+
+.footer {
+    background-image: url(../img/img3.jpg);
+}
+
+.stay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.title {
+    font-size: 4em;
+    letter-spacing: 20px;
+    font-family: fantasy;
+    color: white;
+    position: fixed;
+    transition: .3s ease;
+}
+
+.title:hover {
+    transform: scale(1.1);
+    color: black;
+}
